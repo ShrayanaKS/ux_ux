@@ -1,0 +1,145 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.business-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
+    padding: 40px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+}
+
+.profile-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 15px #00ffff, inset 0 0 15px #00ffff;
+    animation: pulse 2s infinite ease-in-out;
+    z-index: 1;
+}
+
+.profile-photo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #1e1e1e;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.profile-photo:hover {
+    transform: rotate(5deg);
+}
+
+.card-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.2rem;
+    color: #00ffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.card-title {
+    font-size: 1rem;
+    margin: 5px 0 20px;
+    font-weight: 400;
+    color: #b0b0b0;
+}
+
+.card-bio {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.links-section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-button {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 50px;
+    color: #121212;
+    background-color: #00ffff;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+}
+
+.link-button:hover {
+    background-color: #00e5e5;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5);
+}
+
+.card-footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #555;
+}
